@@ -2,15 +2,15 @@ name: self-hosted runner
 on: workflow_dispatch
 jobs:
   build:
-  runs-on: build
-  steps:
-    - name: checkout
-      users: actions/checkout@v4.2.2
-    - name: List files and folders
-      run: ls
-    - name: install nginx
-      run: sudo apt install nginx -y
-      
+    runs-on: build
+    steps:
+        - name: checkout
+          users: actions/checkout@v4.2.2
+        - name: List files and folders
+          run: ls
+        - name: install nginx
+          run: sudo apt install nginx -y
+          
 
 
 
