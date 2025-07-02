@@ -5,7 +5,7 @@ jobs:
     runs-on: build
     steps:
         - name: checkout
-          users: actions/checkout@v4.2.2
+          uses: actions/checkout@v4.2.2
         - name: List files and folders
           run: ls
         - name: install nginx
