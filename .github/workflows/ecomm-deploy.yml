@@ -6,14 +6,14 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: install nginx and remove default page
-        run:
+        run: |
           sudo apt install nginx y
           sudo rm -rf /var/www/html/*
       - name: clone the code and print location
-        run:
-        git clone https://github.com/yarlagaddalavanya24/ecomm.git
-        ls
-        pwd
+        run: |
+          git clone https://github.com/yarlagaddalavanya24/ecomm.git
+          ls
+          pwd
       - name: deploy ecomm 
         run: sudo cp -rf ecomm/ /var/www/html/
       - name: remove ecomm code
