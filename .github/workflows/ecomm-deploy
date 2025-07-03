@@ -14,6 +14,6 @@ jobs:
         git clone https://github.com/yarlagaddalavanya24/ecomm.git
         ls
         pwd
-      - name: deploy ecomm
+      - name: deploy ecomm 
         run: sudo cp -rf ecomn/ /var/www/html/
       - name: remove ecomm code
