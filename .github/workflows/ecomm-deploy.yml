@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: install nginx and remove default page
         run: |
-          sudo apt install nginx y
+          sudo apt install nginx -y
           sudo rm -rf /var/www/html/*
       - name: clone the code and print location
         run: |
@@ -17,4 +17,4 @@ jobs:
       - name: deploy ecomm 
         run: sudo cp -rf ecomm/ /var/www/html/
       - name: remove ecomm code
-        run: sudo rf ecomm
+        run: sudo rm rf ecomm
