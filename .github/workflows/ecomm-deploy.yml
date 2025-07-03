@@ -1,6 +1,6 @@
 
 name: ecomm deployment
-on: workflow dispatch
+on: workflow_dispatch
 jobs:
   ecomm:
     runs-on: self-hosted
