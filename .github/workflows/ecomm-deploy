@@ -1,0 +1,19 @@
+
+name: ecomm deployment
+on: workflow dispatch
+jobs:
+  ecomm:
+    runs-on: self-hosted
+    steps:
+      - name: install nginx and remove default page
+        run:
+          sudo apt install nginx y
+          sudo rm -rf /var/www/html/*
+      - name: clone the code and print location
+        run:
+        git clone https://github.com/yarlagaddalavanya24/ecomm.git
+        ls
+        pwd
+      - name: deploy ecomm
+        run: sudo cp -rf ecomn/ /var/www/html/
+      - name: remove ecomm code
