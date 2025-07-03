@@ -1,4 +1,4 @@
-
+#
 name: ecomm deployment
 on: workflow_dispatch
 jobs:
@@ -17,4 +17,4 @@ jobs:
       - name: deploy ecomm 
         run: sudo cp -rf ecomm/ /var/www/html/
       - name: remove ecomm code
-        run: sudo rm rf ecomm
+        run: sudo rm -rf ecomm
