@@ -1,6 +1,7 @@
-#
 name: ecomm deployment
+
 on: workflow_dispatch
+
 jobs:
   ecomm:
     runs-on: self-hosted
@@ -9,12 +10,18 @@ jobs:
         run: |
           sudo apt install nginx -y
           sudo rm -rf /var/www/html/*
+
       - name: clone the code and print location
         run: |
           git clone https://github.com/yarlagaddalavanya24/ecomm.git
           ls
           pwd
+
       - name: deploy ecomm 
         run: sudo cp -rf ecomm/ /var/www/html/
+
+      - name: restart nginx
+        run: sudo systemctl restart nginx
+
       - name: remove ecomm code
         run: sudo rm -rf ecomm
