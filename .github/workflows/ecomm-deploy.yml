@@ -15,5 +15,5 @@ jobs:
         ls
         pwd
       - name: deploy ecomm 
-        run: sudo cp -rf ecomn/ /var/www/html/
+        run: sudo cp -rf ecomm/ /var/www/html/
       - name: remove ecomm code
