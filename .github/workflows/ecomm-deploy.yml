@@ -17,3 +17,4 @@ jobs:
       - name: deploy ecomm 
         run: sudo cp -rf ecomm/ /var/www/html/
       - name: remove ecomm code
+        run: sudo rf ecomm
